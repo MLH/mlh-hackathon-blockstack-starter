@@ -1,42 +1,43 @@
 # Introduction
 
-This is a hackathon boilerplate for a new Blockstack = applications created by [Major League Hacking][mlh-github]. It is for hackers looking to get started quickly on a new hackathon project using the Blockstack environment.
+This is a hackathon boilerplate for a new Blockstack applications created by [Major League Hacking][mlh-github]. It is for hackers looking to get started quickly on a new hackathon project using the Blockstack environment.
 
+You are going to build a Decentralized Application (DApp) called AnimalKingdom. Animal Kingdom is a DApp for the web. Users log into it and create an animal persona that rules over a specific territory. The combination of persona and territory is a kingdom. Once you create a kingdom, you can add subjects from other kingdoms.
+ 
+The Animal Kingdom interacts with two Blockstack services, the [Blockstack Browser](https://browser.blockstack.org) and the [Gaia data storage hub](https://hub.blockstack.org/). The Blockstack Browser is in itself a DApp. The storage hub is purely a service without user-facing functionality.
 
+Preview the [completed version](http://hackp.ac/animal-kingdom) of this application for yourself by using your Blockstack ID. To learn more about this project feel free to complete Blockstacks [Zero to DApp tutorial](http://hackp.ac/zerotodapp).
 
-- [Installation Guide](#installation-guide) - How to get started with a new Blockstack app
-- [Contributing Guide](https://github.com/MLH/mlh-hackathon-nodejs-starter/blob/master/docs/CONTRIBUTING.md) - How to contribute to the project
-
-# <a name='installation-guide'>Installation Guide</a>
+## Prerequisites
 
 This project requires the following tools:
 
-- Node.js - The JavaScript environment for server-side code.
+- Blockstack ID (Identity) - To test your Animal Kingdom
 - NPM - A Node.js package manager used to install dependencies.
-- Browserfy - JavaScript tool that allows hackers to write Node.js-style modules that compile for use in the browser.
 
 To get started, install NPM on your local computer if you don't have them already.
 
 ## Getting Started
 
-**Step 1. Clone the code into a fresh folder**
+**Step 1. Create a Blockstack IDr**
+
+Open the [Blockstack web application in your browser](http://hackp.ac/blockstack-create).
+
+Blockstack will will prompt you to create or restore an ID.
+
+**Step 2. Install Node Package Manager (NPM).**
+
+The Animal Kingdom uses React, Babel, and many other components. You’ll use the `npm` command to install these packaged components.
+
+Check if you have `npm` installed by entering the following commabd in your terminal, and see if you get a response back.
 
 ```
-$ git clone https://github.com/MLH/mlh-hackathon-blockstack-starter.git
-$ cd mlh-hackathon-blockstack-starter
+npm -v
 ```
+git s
+If `npm` is not installed, you can download it [here](https://www.npmjs.com/get-npm)
 
-**Step 2. Install Dependencies.**
 
-Next, we need to install the project dependencies, which are listed in `package.json`.
-
-```
-$ npm install
-```
-
-Now we're ready to start our server which is as simple as:
-
-`$ npm start`
 
 Open http://localhost:5000 to view it in your browser.
 
