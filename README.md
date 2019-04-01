@@ -1,6 +1,6 @@
 # Introduction
 
-This is a hackathon boilerplate for a new Blockstack applications created by [Major League Hacking][mlh-github] in partnership with Blockstack. It is for hackers looking to get started quickly on a new hackathon project using the Blockstack environment.
+This is a hackathon boilerplate for a new Blockstack application created by [Major League Hacking][mlh-github] in partnership with Blockstack. It is for hackers looking to get started quickly on a new hackathon project using the Blockstack environment.
 
 You are going to build a Decentralized Application (DApp) called Animal Kingdom. Animal Kingdom is a DApp for the web. Users log in and create an animal persona that rules over a specific territory. The combination of persona and territory is a kingdom. Once you create a kingdom, you can add subjects from other kingdoms.
  
@@ -72,12 +72,43 @@ From the initial Animal Kingdom screen, choose an animal persona and a territory
 
 The Animal Kingdom makes a call to the Gaia hub to store your selection, and returns to your kingdom page. If you have problems, refresh the page and click Your Kingdom in the menu. Spend a little time exploring the application. For example, you could edit your animal or visit the other pages such as **Animals** or **Territories**.
 
+![Animal Kingdom](screenshots/animal-kingdom-application-1.png)
 
 Go back to your terminal where your application is running.
 Press `CTRL-C`to stop the application.
 
-Learn more about the the Animal Kingdom Code [here](https://docs.blockstack.org/develop/zero_to_dapp_3.html)
+**Step 6. Customizing your Animal Kingdom**
 
+The Animal Kingdom application has two major components, React and Blockstack. React is used to build all the web components and interactions. You could replace React with any framework that you like; Blockstack is web framework agnostic. The `blockstack.js` library is all a hacker needs to create a DApp. It grants the application the ability to authenticate a Blockstack identity and to read and write to the user’s data stored in a Gaia hub.
+
+# Where to go next
+
+You learned about the Blockstack platform and why it makes Blockchain development a painless process by encapsulating the complexity of the blockstack backend. You have set up a typical development environment for developing a Blockstack web application and ran the Animal Kingdom application locally.
+
+If you would like to customize the Animal Kingdom code follow the Blockstack [Zero to DApp tutorial](https://docs.blockstack.org/develop/zero_to_dapp_3.html) to get started.
+
+# App Mining
+
+Any app built with Blockstack during a hackathon that successfully registers for the App Mining program within two weeks of the event will receive an additional $500 reward. Find your hackathon [here](hackp.ac/blockstack)
+
+To be eligible, your app must use Blockstack technology and be publicly accessible. If you have an eligible app, you can register it for [App Mining here](http://hackp.ac/blockstack-mining). 
+
+# Structure
+
+NAME | DESCRIPTION
+------------ | -------------
+`README.md` | Contains a quick reference for building and running hacker starter kit containing the Animal Kingdom Code.
+`package.json` | An NPM project file.
+`config` | Environment configuration files written in Javascript.
+`public` | Files that are copied into the root of the site you are building.
+`scripts` | NPM scripts used to do common tasks in the project.
+`src` | React source code for the site.  This contains configuration files.
+
+
+# Resources
+* Visit the [Blockstack forum](https://forum.blockstack.org/). This is a valuable resource to learn about the questions that other developers have now or have had in the past.
+* Complete the [Zero to DApp Tutorial](http://hackp.ac/zerotodapp)
+* Visit your [Hackathon Blockstack Page](blockstack.org/mlh) for additional resources & prizes.
 
 
 # Code of Conduct
