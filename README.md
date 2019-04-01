@@ -5,7 +5,6 @@ This is a hackathon boilerplate for a new Blockstack = applications created by [
 
 
 - [Installation Guide](#installation-guide) - How to get started with a new Blockstack app
-- [User Guide](https://github.com/MLH/mlh-hackathon-nodejs-starter/blob/master/docs/USER_GUIDE.md) - How to develop apps created with this starter project
 - [Contributing Guide](https://github.com/MLH/mlh-hackathon-nodejs-starter/blob/master/docs/CONTRIBUTING.md) - How to contribute to the project
 
 # <a name='installation-guide'>Installation Guide</a>
