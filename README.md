@@ -66,7 +66,7 @@ The default port for our app is `3000`, but you may need to update this if your 
 
 The app will automatically reload if you make changes to the code. You will see the build errors and warnings in the console.
 
-**Step 5. Explore Animal Kingdom Code**
+**Step 5. Explore the Animal Kingdom**
 
 From the initial Animal Kingdom screen, choose an animal persona and a territory, and press **done** at the bottom of the page.
 
