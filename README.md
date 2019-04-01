@@ -108,7 +108,7 @@ NAME | DESCRIPTION
 # Resources
 * Visit the [Blockstack forum](https://forum.blockstack.org/). This is a valuable resource to learn about the questions that other developers have now or have had in the past.
 * Complete the [Zero to DApp Tutorial](http://hackp.ac/zerotodapp)
-* Visit your [Hackathon Blockstack Page](blockstack.org/mlh) for additional resources & prizes.
+* Visit your [Hackathon Blockstack Page](http://blockstack.org/mlh) for additional resources & prizes.
 
 
 # Code of Conduct
