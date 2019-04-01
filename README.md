@@ -122,3 +122,7 @@ The Hackathon Starter Kit is open source software [licensed as MIT][mlh-license]
 [mlh-github]: https://github.com/jekyll/jekyll/blob/master/CONDUCT.markdown
 [mlh-conduct]: https://github.com/MLH/mlh-hackathon-nodejs-starter/blob/master/docs/CONDUCT.md
 [mlh-license]: https://github.com/MLH/mlh-hackathon-nodejs-starter/blob/master/LICENSE.md
+
+# Credits
+
+Thank you to our partners Blockstack for providing an in depth [tutorial](http://hackp.ac/zerotodapp) and resources for hackers to use.
