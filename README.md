@@ -89,7 +89,7 @@ If you would like to customize the Animal Kingdom code follow the Blockstack [Ze
 
 # App Mining
 
-Any app built with Blockstack during a hackathon that successfully registers for the App Mining program within two weeks of the event will receive an additional $500 reward. Find your hackathon [here](hackp.ac/blockstack)
+Any app built with Blockstack during a hackathon that successfully registers for the App Mining program within two weeks of the event will receive an additional $500 reward. Find your hackathon [here](https://hackp.ac/blockstack)
 
 To be eligible, your app must use Blockstack technology and be publicly accessible. If you have an eligible app, you can register it for [App Mining here](http://hackp.ac/blockstack-mining). 
 
