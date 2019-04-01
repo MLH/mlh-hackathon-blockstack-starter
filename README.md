@@ -39,6 +39,8 @@ If `npm` is not installed, you can download it [here](https://www.npmjs.com/get-
 
 **Step 3. Clone the Animal Kingdom code into a fresh folder**
 
+Open your terminal if you haven't already and enter the command below to clone the current repository.
+
 ```
 $ git clone https://github.com/MLH/mlh-hackathon-blockstack-starter
 $ cd mlh-hackathon-blockstack-starter
@@ -70,10 +72,12 @@ From the initial Animal Kingdom screen, choose an animal persona and a territory
 
 The Animal Kingdom makes a call to the Gaia hub to store your selection, and returns to your kingdom page. If you have problems, refresh the page and click Your Kingdom in the menu. Spend a little time exploring the application. For example, you could edit your animal or visit the other pages such as **Animals** or **Territories**.
 
+
 Go back to your terminal where your application is running.
 Press `CTRL-C`to stop the application.
 
 Learn more about the the Animal Kingdom Code [here](https://docs.blockstack.org/develop/zero_to_dapp_3.html)
+
 
 
 # Code of Conduct
