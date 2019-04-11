@@ -93,6 +93,12 @@ Any app built with Blockstack during a hackathon that successfully registers for
 
 To be eligible, your app must use Blockstack technology and be publicly accessible. If you have an eligible app, you can register it for [App Mining here](http://hackp.ac/blockstack-mining). 
 
+# Sample Applications
+
+* Banter: https://github.com/blockstack-radiks/banter
+* Animal Kingdom (This is what is created at the end of the Zero to Dapp tutorial): https://github.com/blockstack/animal-kingdom
+* Simple To Do List app: https://github.com/blockstack/blockstack-todos
+
 # Structure
 
 NAME | DESCRIPTION
@@ -109,6 +115,7 @@ NAME | DESCRIPTION
 * Visit the [Blockstack forum](https://forum.blockstack.org/). This is a valuable resource to learn about the questions that other developers have now or have had in the past.
 * Complete the [Zero to DApp Tutorial](http://hackp.ac/zerotodapp)
 * Visit your [Hackathon Blockstack Page](https://hackp.ac/blockstack) for additional resources & prizes.
+
 
 
 # Code of Conduct
