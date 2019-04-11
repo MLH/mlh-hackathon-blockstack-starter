@@ -1,3 +1,18 @@
+# Quick Start
+
+Visit your [Hackathon Blockstack Page](https://hackp.ac/blockstack) for additional resources & prizes.
+
+Complete the [Zero to DApp Tutorial](http://hackp.ac/zerotodapp)
+
+[Learn about Blockstack User Authentication](https://blockstack.github.io/blockstack.js/index.html#authentication)
+
+Blockstack Authentication provides single sign on and authentication without third parties or remote servers. Blockstack Authentication is a bearer token-based authentication system. From an app user's perspective, it functions similar to legacy third-party authentication techniques that they're familiar with. For an app developer, the flow is a bit different from the typical client-server flow of centralized sign in services (e.g., OAuth). Rather, with Blockstack, the authentication flow happens entirely client-side.
+
+[Learn about Blockstack Storage Methods](https://blockstack.github.io/blockstack.js/index.html#storage)
+
+Applications built using Blockstack don’t store any user data. Users on Blockstack’s network store their individual application data using a storage system called Gaia that allows a user to store their data wherever they like. The user brings the application specific data to an app each time they authenticate.
+
+
 # Introduction
 
 This is a hackathon boilerplate for a new Blockstack application created by [Major League Hacking][mlh-github] in partnership with Blockstack. It is for hackers looking to get started quickly on a new hackathon project using the Blockstack environment.
@@ -80,6 +95,106 @@ Press `CTRL-C`to stop the application.
 **Step 6. Customizing your Animal Kingdom**
 
 The Animal Kingdom application has two major components, React and Blockstack. React is used to build all the web components and interactions. You could replace React with any framework that you like; Blockstack is web framework agnostic. The `blockstack.js` library is all a hacker needs to create a DApp. It grants the application the ability to authenticate a Blockstack identity and to read and write to the user’s data stored in a Gaia hub.
+
+**Authenticating user identity**
+
+The `src/app.js` file creates a Blockstack `UserSession` and uses that session's `isUserSignedIn()` method to determine if the user is signed in or out of the application. Depending on the result of this method. The application redirects to the `src/SignedIn` page or to the `src/Landing.js` page.
+
+```javascript
+ import React, { Component } from 'react'
+ import './App.css'
+ import { UserSession } from 'blockstack'
+
+ import Landing from './Landing'
+ import SignedIn from './SignedIn'
+
+ class App extends Component {
+
+   constructor() {
+     super()
+     this.userSession = new UserSession()
+   }
+
+   componentWillMount() {
+     const session = this.userSession
+     if(!session.isUserSignedIn() && session.isSignInPending()) {
+       session.handlePendingSignIn()
+       .then((userData) => {
+         if(!userData.username) {
+           throw new Error('This app requires a username.')
+         }
+         window.location = `/kingdom/${userData.username}`
+       })
+     }
+   }
+
+   render() {
+     return (
+       <main role="main">
+           {this.userSession.isUserSignedIn() ?
+             <SignedIn />
+           :
+             <Landing />
+           }
+       </main>
+     );
+   }
+ }
+
+ export default App
+ ```
+ 
+ **Understanding Blockstack Storage**
+
+Applications built using Blockstack don’t store any user data. Users on Blockstack’s network store their individual application data using a storage system called Gaia that allows a user to store their data wherever they like. The user brings the application specific data to an app each time they authenticate. 
+
+Blockstack JS provides two methods `getFile()` and `putFile()` for interacting with Gaia storage. The storage methods support all file types. This means you can store SQL, Markdown, JSON, or even a custom format.
+
+Once a user authenticates, the application can get and put application data in the user’s storage. After a user signs in, the `SignedIn.js` code checks the user’s Gaia profile by running the `loadMe()` method.
+
+```javascript
+loadMe() {
+    const options = { decrypt: false }
+    this.userSession.getFile(ME_FILENAME, options)
+    .then((content) => {
+      if(content) {
+        const me = JSON.parse(content)
+        this.setState({me, redirectToMe: false})
+      } else {
+        const me = null
+
+        this.setState({me, redirectToMe: true})
+      }
+    })
+  }
+  ```
+  
+Most of the imports in this file are locally coded React components. The key Blockstack imports is the `UserSession` and an `appConfig` which is defined in the `constants.js file`.
+
+The `loadMe()` code uses the Blockstack’s `UserSession.getFile()` method to get the specified file from the applications data store. If the users’ data store on Gaia does not have the data, which is the case for new users, the Gaia hub responds with HTTP 404 code and the getFile promise resolves to null. If you are using a Chrome Developer Tools with the DApp, you’ll see these errors in a browser’s developer Console.
+
+![Kingdom Errors](screenshots/kingdom-errors.png)
+
+After a user chooses an animal persona and a territory, the user presses Done and the application stores the user data on Gaia.
+
+```javascript
+saveMe(me) {
+  this.setState({me, savingMe: true})
+  const options = { encrypt: false }
+  this.userSession.putFile(ME_FILENAME, JSON.stringify(me), options)
+  .finally(() => {
+    this.setState({savingMe: false})
+  })
+}
+```
+The Blockstack `putFile()` stores the data provided in the user’s DApp data store. You can view the URL for the data store from a user’s profile.
+
+If you tested your Animal Kingdom, you can see this on your profile. To see your profile, go to the Blockstack explorer and search for your ID:
+
+![Explorer](screenshots/explorer.png)
+
+
+
 
 # Where to go next
 
