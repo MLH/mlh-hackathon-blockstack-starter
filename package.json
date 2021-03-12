@@ -34,7 +34,7 @@
     "promise": "^8.0.2",
     "raf": "^3.4.1",
     "react": "^16.7.0",
-    "react-dev-utils": "^7.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
     "resolve": "^1.9.0",
